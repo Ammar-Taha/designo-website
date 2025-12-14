@@ -1,0 +1,12 @@
+/* src/index.css */
+
+/* Declare layer order */
+@layer normalize, reset, base, app;
+
+/* --- global layers --- */
+
+@import url("./styles/normalize.css") layer(normalize);
+@import url("./styles/reset.css") layer(reset);
+
+/* base.css = shared components + typography + layout + container + etc. */
+@import url("./styles/base.css") layer(base);

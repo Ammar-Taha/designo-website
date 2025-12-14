@@ -1,0 +1,448 @@
+/* Base styles - shared components and utilities used across all pages */
+/* Navigation, Footer, CTA sections, Locations, etc. */
+
+/* jost-regular - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Jost";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/jost-v20-latin-regular.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* jost-500 - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Jost";
+  font-style: normal;
+  font-weight: 500;
+  src: url("../fonts/jost-v20-latin-500.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* jost-700 - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Jost";
+  font-style: normal;
+  font-weight: 700;
+  src: url("../fonts/jost-v20-latin-700.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+/* ========================================
+   Design System Tokens
+   ======================================== */
+:root {
+  /* Colors (RAW) */
+  --clr-primary: hsl(11, 72%, 66%);
+  --clr-primary-light: hsl(11, 100%, 80%);
+  --clr-primary-lighter: hsl(11, 100%, 90%);
+  --clr-white: hsl(0, 0%, 100%);
+  --clr-dark-gray: hsl(260, 6%, 20%);
+  --clr-light-gray: hsl(210, 17%, 95%);
+  --clr-text-dark: hsl(264, 5%, 20%);
+  --clr-bg-dark: hsl(270, 4%, 11%);
+  --clr-black-50: hsla(0, 0%, 0%, 0.5);
+  --clr-black-60: hsla(0, 0%, 0%, 0.6);
+  --clr-primary-80: hsla(11, 72%, 66%, 0.8);
+  --clr-divider: hsl(0, 0%, 25.5%);
+  --crl-text-light: hsl(0, 0%, 81%);
+  --crl-text-lighter: hsl(0, 0%, 80%);
+
+  /* Colors (Semantic) */
+  --body-bg-color: var(--clr-white);
+  --body-text-color: var(--clr-bg-dark);
+  --nav-links-color: var(--clr-text-dark);
+  --nav-bg-color: var(--clr-bg-dark);
+  --nav-links-menu-color: var(--clr-white);
+  --nav-overlay-color: var(--clr-black-60);
+  --footer-bg-color: var(--clr-bg-dark);
+  --footer-divider-color: var(--clr-divider);
+  --footer-info-color: var(--crl-text-lighter);
+  --footer-social-link-hover: var(--clr-primary-lighter);
+  --primary-btn-bg-color: var(--clr-white);
+  --primary-btn-text-color: var(--clr-text-dark);
+  --contact-section-bg-color: var(--clr-primary);
+  --contact-section-text-color: var(--clr-white);
+  --primary-btn-bg-color-hover: var(--clr-primary-lighter);
+  --primary-btn-text-color-hover: var(--clr-text-gray);
+
+  /* Font Sizes (RAW) */
+  --fs-14: calc(14 / 16 * 1rem);
+  --fs-16: calc(16 / 16 * 1rem);
+  --fs-18: calc(18 / 16 * 1rem);
+  --fs-20: calc(20 / 16 * 1rem);
+  --fs-22: calc(22 / 16 * 1rem);
+  --fs-24: calc(24 / 16 * 1rem);
+  --fs-26: calc(26 / 16 * 1rem);
+  --fs-28: calc(28 / 16 * 1rem);
+  --fs-30: calc(30 / 16 * 1rem);
+  --fs-32: calc(32 / 16 * 1rem);
+  --fs-34: calc(34 / 16 * 1rem);
+  --fs-36: calc(36 / 16 * 1rem);
+  --fs-38: calc(38 / 16 * 1rem);
+  --fs-40: calc(40 / 16 * 1rem);
+  --fs-42: calc(42 / 16 * 1rem);
+  --fs-44: calc(44 / 16 * 1rem);
+  --fs-46: calc(46 / 16 * 1rem);
+  --fs-48: calc(48 / 16 * 1rem);
+
+  /* Font Sizes (Semantic) */
+  --nav-links-font-size: var(--fs-14);
+  --nav-links-menu-font-size: var(--fs-24);
+  --contact-section-title-font-size: var(--fs-40);
+}
+
+/* Global */
+html {
+  scrollbar-gutter: auto;
+}
+
+body {
+  font-family: "Jost", sans-serif;
+  background-color: var(--body-bg-color);
+  color: var(--body-text-color);
+}
+
+button:has(img) {
+  background-color: transparent;
+  border: none;
+}
+
+.primary-btn {
+  background-color: var(--primary-btn-bg-color);
+  color: var(--primary-btn-text-color);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding: 1rem 1.25rem;
+  border-radius: 0.5rem;
+  font-weight: 700;
+  transition: all 0.25s ease-in-out;
+
+  &:hover {
+    background-color: var(--primary-btn-bg-color-hover);
+    color: var(--primary-btn-text-color-hover);
+  }
+}
+
+/* ========================================
+   Utilities
+   ======================================== */
+.container {
+  width: min(calc(100% - 48px), calc(1111 / 16 * 1rem));
+  margin-inline: auto;
+}
+
+.visually_hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+
+  &:focus {
+    position: static;
+    width: auto;
+    height: auto;
+    padding: inherit;
+    margin: inherit;
+    overflow: visible;
+    clip: auto;
+    white-space: normal;
+  }
+}
+
+.skip-link {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  padding: 1rem 2rem;
+  background-color: var(--clr-primary);
+  color: var(--clr-white);
+  text-decoration: none;
+  font-weight: 500;
+  transform: translateY(-100%);
+  transition: transform 0.2s ease-in-out;
+
+  &:focus {
+    transform: translateY(0);
+  }
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+.flex {
+  display: flex;
+
+  &.flex-btwn-cntr {
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &.flex-cntr-cntr {
+    align-items: center;
+    justify-content: center;
+  }
+
+  &.flex-col {
+    flex-direction: column;
+  }
+
+  &.flex-col-cntr {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.grid {
+  display: grid;
+
+  &.grid-2-cols {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  &.grid-3-cols {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  &.grid-2-rows {
+    grid-template-rows: repeat(2, 1fr);
+  }
+}
+
+/* ========================================
+   Components
+   ======================================== */
+
+/* Header */
+.site-header {
+  padding-block: clamp(2.125rem, calc(1.465rem + 2.817vw), 4rem);
+
+  nav.nav {
+    z-index: 999;
+  }
+}
+
+.logo {
+  width: calc(196 / 16 * 1rem);
+  height: calc(24 / 16 * 1rem);
+}
+
+.menu-open-btn,
+.menu-close-btn {
+  display: none;
+}
+
+.nav-overlay {
+  opacity: 0;
+}
+
+.nav__list {
+  gap: calc(42 / 16 * 1rem);
+
+  .nav__link {
+    color: var(--nav-links-color);
+    font-size: var(--nav-links-font-size);
+    letter-spacing: 2px;
+    line-height: 1.4;
+
+    &:hover {
+      text-decoration: underline;
+      text-underline-offset: 2px;
+    }
+  }
+}
+
+@media only screen and (width <= calc(670 / 16 * 1rem)) {
+  .menu-open-btn {
+    display: block;
+    order: 999;
+
+    &[aria-expanded="true"] {
+      display: none;
+
+      ~ .nav .nav__list {
+        translate: 0 -4px;
+      }
+
+      ~ .nav-overlay {
+        opacity: 1;
+        pointer-events: auto;
+      }
+
+      ~ .menu-close-btn {
+        display: block;
+        order: 999;
+      }
+    }
+  }
+
+  .menu-close-btn {
+    display: none;
+  }
+
+  .nav-overlay {
+    position: fixed;
+    inset: calc(96 / 16 * 1rem) 0 0 0;
+    background-color: var(--nav-overlay-color);
+    pointer-events: none;
+    transition: opacity 0.3s ease-in-out;
+    z-index: 999;
+  }
+
+  .nav__list {
+    flex-direction: column;
+    justify-content: center;
+    gap: calc(32 / 16 * 1rem);
+    background-color: var(--nav-bg-color);
+    position: fixed;
+    inset: calc(96 / 16 * 1rem) 0 auto 0;
+    padding: calc(40 / 16 * 1rem) calc(24 / 16 * 1rem);
+    translate: 0 -150%;
+
+    &.animating {
+      transition: translate 0.3s ease-in-out;
+    }
+
+    .nav__link {
+      color: var(--nav-links-menu-color);
+      font-size: var(--nav-links-menu-font-size);
+    }
+  }
+}
+
+/* Footer */
+.site-footer {
+  background-color: var(--footer-bg-color);
+  padding-block-start: clamp(9rem, calc(293px - 10.33vw), 15.875rem);
+  padding-block-end: clamp(4rem, calc(3.824rem + 0.751vw), 4.5rem);
+  color: var(--clr-white);
+  z-index: -1;
+
+  .container.flex {
+    gap: calc(40 / 16 * 1rem);
+  }
+
+  .nav__link {
+    color: var(--clr-white);
+  }
+
+  .footer-divider {
+    height: 1px;
+    color: var(--footer-divider-color);
+  }
+
+  .footer-info {
+    color: var(--footer-info-color);
+
+    .footer-info__address-office,
+    .footer-info__contact {
+      font-weight: 600;
+    }
+
+    .footer-info__address {
+      font-style: normal;
+      margin-inline-end: clamp(3.563rem, calc(-7.009rem + 22.024vw), 12.813rem);
+    }
+
+    .footer-info__social-list {
+      margin-inline-start: auto;
+      align-self: flex-end;
+      align-items: center;
+      gap: 1rem;
+
+      .footer-info__social-link:hover img {
+        filter: brightness(125%);
+        transform: scale(1.05);
+        transition: 0.25s ease-in-out;
+        transition-property: filter, transform;
+      }
+    }
+  }
+
+  @media only screen and (width <= calc(687 / 16 * 1rem)) {
+    .footer-nav,
+    .footer-info {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .footer-nav {
+      gap: 3rem;
+
+      .nav__list {
+        position: static;
+        inset: auto;
+        padding: 0;
+        translate: 0;
+        background-color: transparent;
+        gap: 2rem;
+        flex-direction: column;
+        align-items: center;
+
+        .nav__link {
+          font-size: unset;
+        }
+      }
+    }
+
+    .footer-info {
+      gap: 2.5rem;
+      text-align: center;
+
+      .footer-info__address {
+        margin-inline-end: 0;
+      }
+
+      .footer-info__social-list {
+        align-self: center;
+        margin-inline-start: 0;
+      }
+    }
+  }
+}
+
+/* Contact */
+.contact-section {
+  position: relative;
+  z-index: 1;
+
+  .container.flex {
+    background-color: var(--contact-section-bg-color);
+    color: var(--contact-section-text-color);
+    padding-block: clamp(4rem, calc(3.824rem + 0.751vw), 4.5rem);
+    padding-inline: clamp(1.5rem, calc(-0.085rem + 6.761vw), 6rem);
+    border-radius: 1rem;
+    background-image: url("/assets/shared/desktop/bg-pattern-call-to-action.svg");
+    background-position: right;
+    background-repeat: no-repeat;
+    margin-block-end: clamp(
+      -11.5625rem,
+      calc(-4.625rem + 6.9375 * (100vw - 90rem) / 66.5625),
+      -4.625rem
+    );
+  }
+
+  .contact-section__title {
+    font-size: var(--contact-section-title-font-size);
+    font-weight: 500;
+    margin-block-end: 1rem;
+  }
+
+  .contact-section__description {
+    max-width: 45ch;
+  }
+
+  @media only screen and (width <= calc(768 / 16 * 1rem)) {
+    .container.flex {
+      flex-direction: column;
+      align-items: center;
+      gap: 2rem;
+      text-align: center;
+    }
+  }
+}

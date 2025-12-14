@@ -1,0 +1,48 @@
+<!-- Header component - shared across all pages -->
+<!-- Replace this comment with your actual header markup -->
+
+<div class="container flex flex-btwn-cntr">
+  <a href="../index.html" target="_blank" class="logo-link">
+    <img
+      src="/assets/shared/desktop/logo-dark.png"
+      alt="Designo Logo"
+      class="logo"
+    />
+  </a>
+  <button class="menu-open-btn" aria-label="Open menu" aria-expanded="false">
+    <img
+      src="/assets/shared/mobile/icon-hamburger.svg"
+      alt=""
+      class="menu-open-icon"
+      aria-hidden="true"
+    />
+  </button>
+  <button class="menu-close-btn" aria-label="Close menu">
+    <img
+      src="/assets/shared/mobile/icon-close.svg"
+      alt=""
+      class="menu-close-icon"
+      aria-hidden="true"
+    />
+  </button>
+  <div class="nav-overlay" aria-hidden="true"></div>
+  <nav class="nav" role="dialog" aria-modal="true" aria-label="Main navigation">
+    <ul class="nav__list flex uppercase">
+      <li class="nav__item">
+        <a href="../pages/about.html" target="_blank" class="nav__link"
+          >Our Company</a
+        >
+      </li>
+      <li class="nav__item">
+        <a href="../pages/locations.html" target="_blank" class="nav__link"
+          >Locations</a
+        >
+      </li>
+      <li class="nav__item">
+        <a href="../pages/contact.html" target="_blank" class="nav__link"
+          >Contact</a
+        >
+      </li>
+    </ul>
+  </nav>
+</div>

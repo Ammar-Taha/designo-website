@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/png" sizes="24x24" href="/assets/Oval.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Designo | Home</title>
+  </head>
+  <body class="page-home">
+    <section class="hero">
+      <div class="container flex flex-btwn-cntr">
+        <article class="hero__content flex flex-col">
+          <h1 class="hero__title">
+            Award-winning custom designs and digital branding solutions
+          </h1>
+          <p class="hero__description">
+            With over 10 years in the industry, we are experienced in creating
+            fully responsive websites, app design, and engaging brand
+            experiences. Find out more about our services.
+          </p>
+          <a href="src/pages/about.html" target="_blank" class="btn primary-btn"
+            >Learn more</a
+          >
+        </article>
+        <img
+          src="/assets/home/desktop/image-hero-phone.png"
+          alt="Hero image"
+          class="hero__image"
+        />
+      </div>
+    </section>
+
+    <section class="projects">
+      <img
+        class="leaf"
+        src="assets/shared/desktop/bg-pattern-leaf.svg"
+        alt=""
+      />
+      <div class="container grid grid-2-cols grid-2-rows">
+        <a
+          class="link-card flex flex-cntr-cntr"
+          href="src/pages/web-design.html"
+          target="_blank"
+        >
+          <picture class="link-card__media" aria-hidden="true">
+            <source
+              media="(min-width: 976px)"
+              srcset="/assets/home/desktop/image-web-design-large.jpg"
+            />
+            <source
+              media="(min-width: 670px) and (max-width: 975px)"
+              srcset="/assets/home/tablet/image-web-design.jpg"
+            />
+            <img src="/assets/home/mobile/image-web-design.jpg" alt="" />
+          </picture>
+          <article class="link-card__overlay flex flex-col-cntr">
+            <h3 class="uppercase">Web Design</h3>
+            <p class="project__description flex uppercase">
+              View Projects
+              <img
+                src="/assets/shared/desktop/icon-right-arrow.svg"
+                alt="Right arrow"
+              />
+            </p>
+          </article>
+        </a>
+        <a
+          class="link-card flex flex-cntr-cntr"
+          href="src/pages/app-design.html"
+          target="_blank"
+        >
+          <picture class="link-card__media" aria-hidden="true">
+            <source
+              media="(min-width: 976px)"
+              srcset="/assets/home/desktop/image-app-design.jpg"
+            />
+            <source
+              media="(min-width: 670px) and (max-width: 975px)"
+              srcset="/assets/home/tablet/image-app-design.jpg"
+            />
+            <img src="/assets/home/mobile/image-app-design.jpg" alt="" />
+          </picture>
+          <article class="link-card__overlay flex flex-col-cntr">
+            <h3 class="uppercase">App Design</h3>
+            <p class="project__description flex uppercase">
+              View Projects
+              <img
+                src="/assets/shared/desktop/icon-right-arrow.svg"
+                alt="Right arrow"
+              />
+            </p>
+          </article>
+        </a>
+        <a
+          class="link-card flex flex-cntr-cntr"
+          href="src/pages/graphic-design.html"
+          target="_blank"
+        >
+          <picture class="link-card__media" aria-hidden="true">
+            <source
+              media="(min-width: 976px)"
+              srcset="/assets/home/desktop/image-graphic-design.jpg"
+            />
+            <source
+              media="(min-width: 670px) and (max-width: 975px)"
+              srcset="/assets/home/tablet/image-graphic-design.jpg"
+            />
+            <img src="/assets/home/mobile/image-graphic-design.jpg" alt="" />
+          </picture>
+          <article class="link-card__overlay flex flex-col-cntr">
+            <h3 class="uppercase">Graphic Design</h3>
+            <p class="project__description flex uppercase">
+              View Projects
+              <img
+                src="/assets/shared/desktop/icon-right-arrow.svg"
+                alt="Right arrow"
+              />
+            </p>
+          </article>
+        </a>
+      </div>
+    </section>
+
+    <section class="characteristics">
+      <img
+        class="leaf"
+        src="assets/shared/desktop/bg-pattern-leaf.svg"
+        alt=""
+      />
+      <div class="container grid grid-3-cols">
+        <article class="characteristics__card flex flex-col">
+          <img src="assets/home/desktop/illustration-passionate.svg" alt="" />
+          <div>
+            <h3 class="uppercase">Passionate</h3>
+            <p>
+              Each project starts with an in-depth brand research to ensure we
+              only create products that serve a purpose. We merge art, design,
+              and technology into exciting new solutions.
+            </p>
+          </div>
+        </article>
+        <article class="characteristics__card flex flex-col">
+          <img src="assets/home/desktop/illustration-resourceful.svg" alt="" />
+          <div>
+            <h3 class="uppercase">Resourceful</h3>
+            <p>
+              Everything that we do has a strategic purpose. We use an agile
+              approach in all of our projects and value customer collaboration.
+              It guarantees superior results that fulfill our clients' needs.
+            </p>
+          </div>
+        </article>
+        <article class="characteristics__card flex flex-col">
+          <img src="assets/home/desktop/illustration-friendly.svg" alt="" />
+          <div>
+            <h3 class="uppercase">Friendly</h3>
+            <p>
+              We are a group of enthusiastic folks who know how to put people
+              first. Our success depends on our customers, and we strive to give
+              them the best experience a company can provide.
+            </p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
