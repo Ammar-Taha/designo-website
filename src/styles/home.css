@@ -34,6 +34,11 @@
       gap: calc(40 / 16 * 1rem);
       flex-basis: 53%;
 
+      .hero__title {
+        font-size: clamp(2rem, calc(1.648rem + 1.502vw), 3rem);
+        font-weight: 500;
+      }
+
       .hero__description {
         max-width: 50ch;
       }

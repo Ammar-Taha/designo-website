@@ -14,25 +14,26 @@
   </head>
   <body class="page-web-design">
     <!-- Page content -->
-    <section class="hero">
+    <section class="banner section-spacing">
       <div class="container flex flex-col text-center">
-        <h1 class="hero__title">Web Design</h1>
-        <p class="hero__description">
+        <h1 class="banner__title">Web Design</h1>
+        <p class="banner__description">
           We build websites that serve as powerful marketing tools and bring
           memorable brand experiences.
         </p>
       </div>
     </section>
 
-    <section class="library">
+    <section class="library section-spacing">
       <img
         class="leaf"
         src="/assets/shared/desktop/bg-pattern-leaf.svg"
         alt=""
+        loading="lazy"
       />
-      <div class="container grid">
+      <div class="container grid grid-auto grid-fit">
         <figure class="library__card">
-          <img src="/assets/web-design/desktop/image-express.jpg" alt="" />
+          <img src="/assets/web-design/desktop/image-express.jpg" alt="" loading="lazy" />
           <figcaption class="flex flex-col text-center">
             <h2 class="library__title uppercase">Express</h2>
             <p class="library__description">
@@ -89,8 +90,8 @@
       </div>
     </section>
 
-    <section class="projects">
-      <div class="container grid grid-2-cols">
+    <section class="projects section-spacing">
+      <div class="container grid grid-2-cols grid-gap-projects">
         <a
           class="project-card flex flex-cntr-cntr"
           href="app-design.html"
@@ -105,7 +106,7 @@
               media="(min-width: 670px) and (max-width: 975px)"
               srcset="/assets/home/tablet/image-app-design.jpg"
             />
-            <img src="/assets/home/mobile/image-app-design.jpg" alt="" />
+            <img src="/assets/home/mobile/image-app-design.jpg" alt="" loading="lazy" />
           </picture>
           <article class="project-card__overlay flex flex-col-cntr">
             <h3 class="uppercase">App Design</h3>
@@ -132,7 +133,7 @@
               media="(min-width: 670px) and (max-width: 975px)"
               srcset="/assets/home/tablet/image-graphic-design.jpg"
             />
-            <img src="/assets/home/mobile/image-graphic-design.jpg" alt="" />
+            <img src="/assets/home/mobile/image-graphic-design.jpg" alt="" loading="lazy" />
           </picture>
           <article class="project-card__overlay flex flex-col-cntr">
             <h3 class="uppercase">Graphic Design</h3>

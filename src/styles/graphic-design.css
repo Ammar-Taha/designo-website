@@ -3,4 +3,35 @@
 @layer app;
 
 .page-graphic-design {
+  --library-card-bg-color: hsl(14, 76%, 97%);
+
+  .banner {
+    .container.flex {
+      background-image: url("/assets/graphic-design/desktop/bg-pattern-intro-graphic.svg");
+      background-position: clamp(
+          calc(0% - calc(75 / 16 * 1rem)),
+          calc(
+            0% - (calc(975 / 16 * 1rem) - 100vw) * 0.8 - calc(75 / 16 * 1rem)
+          ),
+          calc(0% - calc(225 / 16 * 1rem))
+        )
+        50%;
+    }
+  }
+}
+
+/* Media Queries */
+@media only screen and (width <= calc(670 / 16 * 1rem)) {
+  .page-graphic-design {
+    .banner {
+      .container.flex {
+        width: 100%;
+        border-radius: 0;
+        background-image: url("/assets/shared/desktop/bg-pattern-small-circle.svg");
+        background-size: contain;
+        background-position: top right;
+        background-repeat: no-repeat;
+      }
+    }
+  }
 }

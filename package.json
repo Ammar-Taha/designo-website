@@ -13,6 +13,7 @@
   },
   "dependencies": {
     "@oddbird/css-anchor-positioning": "^0.8.0",
+    "css-slope-clamp": "^1.0.0",
     "normalize.css": "^8.0.1"
   }
 }
