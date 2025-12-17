@@ -13,17 +13,123 @@
     <title>Designo | Locations</title>
   </head>
   <body class="page-locations">
-    <!-- Page content -->
-    Our Company Locations Contact Canada Designo Central Office 3886 Wellington
-    Street Toronto, Ontario M9C 3J5 Contact P : +1 253-863-8967 M :
-    contact@designo.co Australia Designo AU Office 19 Balonne Street New South
-    Wales 2443 Contact P : (02) 6720 9092 M : contact@designo.au United Kingdom
-    Designo UK Office 13 Colorado Way Rhyd-y-fro SA8 9GA Contact P : 078 3115
-    1400 M : contact@designo.uk Let's talk about your project Ready to take it
-    to the next level? Contact us today and find out how our expertise can help
-    your business grow. Get in touch Our company Locations Contact Designo
-    Central Office 3886 Wellington Street Toronto, Ontario M9C 3J5 Contact Us
-    (Central Office) P : +1 253-863-8967 M : contact@designo.co
+    <section class="locations section-spacing">
+      <div class="container grid">
+        <!-- Canada Location -->
+        <article class="location-row">
+          <section class="location-content">
+            <h2>Canada</h2>
+            <div class="location-details flex">
+              <address class="location-info">
+                <p><strong>Designo Central Office</strong></p>
+                <p>3886 Wellington Street</p>
+                <p>Toronto, Ontario M9C 3J5</p>
+              </address>
+              <section class="contact-info">
+                <p><strong>Contact</strong></p>
+                <p>P : <a href="tel:+12538638967">+1 253-863-8967</a></p>
+                <p>
+                  M : <a href="mailto:contact@designo.co">contact@designo.co</a>
+                </p>
+              </section>
+            </div>
+          </section>
+          <figure class="location-map">
+            <picture>
+              <source
+                media="(min-width: 976px)"
+                srcset="/assets/locations/desktop/image-map-canada.png"
+              />
+              <source
+                media="(min-width: 670px) and (max-width: 975px)"
+                srcset="/assets/locations/tablet/image-map-canada.png"
+              />
+              <img
+                src="/assets/locations/desktop/image-map-canada.png"
+                alt="Canada location map"
+                loading="lazy"
+              />
+            </picture>
+          </figure>
+        </article>
+
+        <!-- Australia Location (Reversed) -->
+        <article class="location-row location-row--reversed">
+          <figure class="location-map">
+            <picture>
+              <source
+                media="(min-width: 976px)"
+                srcset="/assets/locations/desktop/image-map-australia.png"
+              />
+              <source
+                media="(min-width: 670px) and (max-width: 975px)"
+                srcset="/assets/locations/tablet/image-map-australia.png"
+              />
+              <img
+                src="/assets/locations/desktop/image-map-australia.png"
+                alt="Australia location map"
+                loading="lazy"
+              />
+            </picture>
+          </figure>
+          <section class="location-content">
+            <h2>Australia</h2>
+            <div class="location-details flex">
+              <address class="location-info">
+                <p><strong>Designo AU Office</strong></p>
+                <p>19 Balonne Street</p>
+                <p>New South Wales 2443</p>
+              </address>
+              <section class="contact-info">
+                <p><strong>Contact</strong></p>
+                <p>P : <a href="tel:+61267209092">(02) 6720 9092</a></p>
+                <p>
+                  M : <a href="mailto:contact@designo.au">contact@designo.au</a>
+                </p>
+              </section>
+            </div>
+          </section>
+        </article>
+
+        <!-- United Kingdom Location -->
+        <article class="location-row">
+          <section class="location-content">
+            <h2>United Kingdom</h2>
+            <div class="location-details flex">
+              <address class="location-info">
+                <p><strong>Designo UK Office</strong></p>
+                <p>13 Colorado Way</p>
+                <p>Rhyd-y-fro SA8 9GA</p>
+              </address>
+              <section class="contact-info">
+                <p><strong>Contact</strong></p>
+                <p>P : <a href="tel:+447831151400">078 3115 1400</a></p>
+                <p>
+                  M : <a href="mailto:contact@designo.uk">contact@designo.uk</a>
+                </p>
+              </section>
+            </div>
+          </section>
+          <figure class="location-map">
+            <picture>
+              <source
+                media="(min-width: 976px)"
+                srcset="/assets/locations/desktop/image-map-united-kingdom.png"
+              />
+              <source
+                media="(min-width: 670px) and (max-width: 975px)"
+                srcset="/assets/locations/tablet/image-map-uk.png"
+              />
+              <img
+                src="/assets/locations/desktop/image-map-united-kingdom.png"
+                alt="United Kingdom location map"
+                loading="lazy"
+              />
+            </picture>
+          </figure>
+        </article>
+      </div>
+    </section>
 
     <script type="module" src="../main.js"></script>
   </body>

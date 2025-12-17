@@ -3,4 +3,8 @@
 @layer app;
 
 .page-contact {
+  .site-footer {
+    /* Make padding-block equal (top and bottom same as bottom value) */
+    padding-block: clamp(4rem, calc(3.824rem + 0.751vw), 4.5rem);
+  }
 }
