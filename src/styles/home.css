@@ -34,11 +34,6 @@
       gap: calc(40 / 16 * 1rem);
       flex-basis: 53%;
 
-      .hero__title {
-        font-size: clamp(2rem, calc(1.648rem + 1.502vw), 3rem);
-        font-weight: 500;
-      }
-
       .hero__description {
         max-width: 50ch;
       }
@@ -61,7 +56,6 @@
 
   .projects {
     margin-block-end: clamp(7.5rem, calc(6.62rem + 3.756vw), 10rem);
-    position: relative;
 
     .leaf {
       position: absolute;
@@ -81,7 +75,6 @@
 
   .characteristics {
     margin-block-end: clamp(7.5rem, calc(6.62rem + 3.756vw), 10rem);
-    position: relative;
 
     .leaf {
       position: absolute;

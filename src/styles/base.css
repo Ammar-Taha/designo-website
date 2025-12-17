@@ -34,6 +34,7 @@
   --clr-primary: hsl(11, 72%, 66%);
   --clr-primary-light: hsl(11, 100%, 80%);
   --clr-primary-lighter: hsl(11, 100%, 90%);
+  --clr-primary-shade: hsl(14, 76%, 97%);
   --clr-white: hsl(0, 0%, 100%);
   --clr-dark-gray: hsl(260, 6%, 20%);
   --clr-light-gray: hsl(210, 17%, 95%);
@@ -97,6 +98,7 @@
   --nav-links-font-size: var(--fs-14);
   --nav-links-menu-font-size: var(--fs-24);
   --contact-section-title-font-size: var(--fs-40);
+  --locations-title-font-size: var(--fs-20);
 }
 
 /* Global */
@@ -108,6 +110,7 @@ body {
   font-family: "Jost", sans-serif;
   background-color: var(--body-bg-color);
   color: var(--body-text-color);
+  overflow-x: hidden;
 }
 
 button:has(img) {
@@ -239,6 +242,27 @@ button:has(img) {
 
 .text-center {
   text-align: center;
+}
+
+.heading-hero {
+  font-size: clamp(2rem, calc(1.648rem + 1.502vw), 3rem);
+  font-weight: 500;
+}
+
+.leaf-decorative {
+  position: absolute;
+  top: -20.75rem;
+  z-index: -1;
+}
+
+@media only screen and (max-width: calc(975 / 16 * 1rem)) {
+  .leaf-decorative {
+    display: none;
+  }
+}
+
+.relative {
+  position: relative;
 }
 
 .section-spacing {
@@ -496,11 +520,6 @@ button:has(img) {
     background-repeat: no-repeat;
   }
 
-  .banner__title {
-    font-size: clamp(2rem, calc(1.648rem + 1.502vw), 3rem);
-    font-weight: 500;
-  }
-
   .banner__description {
     max-width: 45ch;
   }
@@ -508,20 +527,6 @@ button:has(img) {
 
 /* Library */
 .library {
-  position: relative;
-
-  .leaf {
-    position: absolute;
-    top: -20.75rem;
-    z-index: -1;
-  }
-
-  @media only screen and (max-width: calc(975 / 16 * 1rem)) {
-    .leaf {
-      display: none;
-    }
-  }
-
   @media only screen and (width <= calc(670 / 16 * 1rem)) {
     .container.grid {
       grid-template-columns: 1fr;
@@ -677,6 +682,43 @@ button:has(img) {
   .project-card__media {
     img {
       height: calc(250 / 16 * 1rem);
+    }
+  }
+}
+
+/* Locations */
+.locations {
+  .location.flex {
+    align-items: center;
+
+    img {
+      margin-block-end: calc(48 / 16 * 1rem);
+      background-image: url("/assets/shared/desktop/bg-pattern-small-circle.svg");
+    }
+
+    h2 {
+      font-size: var(--locations-title-font-size);
+      font-weight: 500;
+      letter-spacing: 5px;
+      margin-block-end: calc(32 / 16 * 1rem);
+    }
+
+    a.primary-btn {
+      background-color: var(--clr-primary);
+      color: var(--clr-white);
+
+      &:hover {
+        background-color: var(--clr-primary-lighter);
+      }
+    }
+  }
+}
+
+@media only screen and (width <= calc(975 / 16 * 1rem)) {
+  .locations {
+    .container.grid {
+      grid-template-columns: 1fr;
+      gap: calc(80 / 16 * 1rem);
     }
   }
 }

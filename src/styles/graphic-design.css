@@ -2,8 +2,11 @@
 
 @layer app;
 
+:root {
+  --library-card-bg-color: var(--clr-primary-shade);
+}
+
 .page-graphic-design {
-  --library-card-bg-color: hsl(14, 76%, 97%);
 
   .banner {
     .container.flex {
