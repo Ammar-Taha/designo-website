@@ -52,6 +52,12 @@
         padding-right: 8rem;
         box-shadow: inset 0 -1px 0 0 var(--contact-input-underline-color);
         width: 100%;
+        color: var(--contact-text-color);
+
+        &::placeholder {
+          color: var(--contact-text-color);
+          opacity: 0.5;
+        }
 
         &:focus {
           box-shadow: inset 0 -3px 0 0 white;
